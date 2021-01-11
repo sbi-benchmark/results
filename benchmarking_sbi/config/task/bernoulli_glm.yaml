@@ -1,0 +1,4 @@
+# @package _group_
+name: bernoulli_glm
+num_simulations: 1000
+num_observation: 1

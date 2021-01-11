@@ -1,0 +1,13 @@
+# Whether to compute metrics after run or not
+compute_metrics: true
+
+# Hydra's overrides are used to change to different tasks and algorithms
+defaults:
+  - algorithm: prior
+  - task: gaussian_linear
+
+# Device to use, set on per-algorithm basis
+device: ${algorithm.device}
+
+# Seed
+seed: null
