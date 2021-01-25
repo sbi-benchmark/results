@@ -5,7 +5,7 @@ This repository contains the results as well as the scripts that generated them 
 The results were generated using our benchmark framework, `sbibm`, which can be found at: https://github.com/sbi-benchmark/sbibm.
 
 
-## Results
+## Results as dataframes
 
 The subfolder `results/` contains csv files with results for the manuscript *Benchmarking simulation-based inference*. They can, for example, be read with [`pandas`](https://pandas.pydata.org) as dataframes for comparisons and further analyses.
 
@@ -21,7 +21,12 @@ The subfolder `results/` contains csv files with results for the manuscript *Ben
 | `supplement_hyperparameters_snpe.csv`         | Hyperparameters for (S)NPE                          |
 | `supplement_hyperparameters_snre.csv`         | Hyperparameters for (S)NRE                          |
 
-Raw results for each run from which these dataframes were compiled are [also available](https://github.com/mackelab/benchmarking_sbi_runs).
+
+## Raw results for each run
+
+Raw results for each single run from which these dataframes were compiled—including samples from all approximate posteriors—are also available. For space reasons, they are hosted in a separately using LFS:
+
+> https://github.com/mackelab/benchmarking_sbi_runs
 
 
 ## Reproducing results
@@ -82,7 +87,7 @@ hip.Experiment.from_dataframe(df).display()
 The manuscript is available [on arXiv](https://arxiv.org/abs/2101.04653) as a preprint:
 
 ```bibtex
-@misc{lueckmann2020benchmarking,
+@misc{lueckmann2021benchmarking,
   title         = {Benchmarking simulation-based inference},
   author        = {Lueckmann, Jan-Matthis and Boelts, Jan and Greenberg, David S. 
                    and Gon{\c{c}}alves, Pedro J. and Macke, Jakob H.},
