@@ -1,6 +1,6 @@
 # Benchmarking simulation-based inference
 
-This repository contains the results as well as the scripts that generated them for the [manuscript "Benchmarking simulation-based inference"](https://arxiv.org/abs/2101.04653). 
+This repository contains the results as well as the scripts that generated them for the [manuscript "Benchmarking simulation-based inference"](http://proceedings.mlr.press/v130/lueckmann21a.html). 
 
 The results were generated using our benchmark framework, `sbibm`, which can be found at: https://github.com/sbi-benchmark/sbibm.
 
@@ -84,17 +84,20 @@ hip.Experiment.from_dataframe(df).display()
 
 ## Citation
 
-The manuscript is available [on arXiv](https://arxiv.org/abs/2101.04653) as a preprint:
+The manuscript is [available through PMLR](http://proceedings.mlr.press/v130/lueckmann21a.html):
 
 ```bibtex
-@misc{lueckmann2021benchmarking,
-  title         = {Benchmarking simulation-based inference},
-  author        = {Lueckmann, Jan-Matthis and Boelts, Jan and Greenberg, David S. 
-                   and Gon{\c{c}}alves, Pedro J. and Macke, Jakob H.},
-  year          = {2021},
-  eprint        = {2101.04653},
-  archivePrefix = {arXiv},
-  primaryClass  = {stat.ML}
+@InProceedings{lueckmann2021benchmarking, 
+  title     = {Benchmarking Simulation-Based Inference},
+  author    = {Lueckmann, Jan-Matthis and Boelts, Jan and Greenberg, David and Goncalves, Pedro and Macke, Jakob}, 
+  booktitle = {Proceedings of The 24th International Conference on Artificial Intelligence and Statistics}, 
+  pages     = {343--351}, 
+  year      = {2021}, 
+  editor    = {Banerjee, Arindam and Fukumizu, Kenji}, 
+  volume    = {130}, 
+  series    = {Proceedings of Machine Learning Research}, 
+  month     = {13--15 Apr}, 
+  publisher = {PMLR}
 }
 ```
 
