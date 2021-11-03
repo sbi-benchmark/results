@@ -34,12 +34,13 @@ Raw results for each single run from which these dataframes were compiled—incl
 If you want to reproduce the experiments of the benchmark, or want to adapt our code to run your own experiments using the same analysis pipeline, start by cloning this repository:
 
 ```commandline
-$ git clone git@github.com:mackelab/benchmarking_sbi.git
+$ git clone git@github.com:sbi-benchmark/results.git
 ```
 
 Next, install the neccessary dependencies via:
 
 ```commandline
+$ cd benchmarking_sbi
 $ pip install -r requirements.txt
 ```
 
