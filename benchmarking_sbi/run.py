@@ -24,7 +24,7 @@ from sbibm.utils.io import (
 @hydra.main(config_path="config", config_name="config")
 def main(cfg: DictConfig) -> None:
     log = logging.getLogger(__name__)
-    log.info(cfg.pretty())
+    log.info(OmegaConf.to_yaml(cfg))
     log.info(f"sbibm version: {sbibm.__version__}")
     log.info(f"Hostname: {socket.gethostname()}")
     if cfg.seed is None:

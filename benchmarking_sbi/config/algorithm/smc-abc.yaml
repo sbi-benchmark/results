@@ -1,4 +1,3 @@
-# @package _group_
 name: SMC-ABC
 run: sbi.smcabc.run
 device: cpu

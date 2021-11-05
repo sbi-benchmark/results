@@ -5,6 +5,7 @@ compute_metrics: true
 defaults:
   - algorithm: prior
   - task: gaussian_linear
+  - _self_
 
 # Device to use, set on per-algorithm basis
 device: ${algorithm.device}

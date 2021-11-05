@@ -1,4 +1,3 @@
-# @package _group_
 name: Posterior
 run: pytorch.baseline_posterior.run
 device: cpu
