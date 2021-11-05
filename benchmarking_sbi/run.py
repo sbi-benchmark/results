@@ -11,7 +11,6 @@ import pandas as pd
 import sbibm
 import torch
 import yaml
-from pprint import pformat
 from omegaconf import DictConfig, OmegaConf
 from sbibm.utils.debug import pdb_hook
 from sbibm.utils.io import (
@@ -25,7 +24,7 @@ from sbibm.utils.io import (
 @hydra.main(config_path="config", config_name="config")
 def main(cfg: DictConfig) -> None:
     log = logging.getLogger(__name__)
-    log.info(pformat(cfg))
+    log.info(OmegaConf.to_yaml(cfg))
     log.info(f"sbibm version: {sbibm.__version__}")
     log.info(f"Hostname: {socket.gethostname()}")
     if cfg.seed is None:
