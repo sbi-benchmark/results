@@ -1,4 +1,3 @@
-# @package _group_
 name: NRE
 run: sbi.snre.run
 device: cpu

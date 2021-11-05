@@ -1,4 +1,3 @@
-# @package _group_
 name: REJ-ABC
 run: sbi.mcabc.run
 device: cpu

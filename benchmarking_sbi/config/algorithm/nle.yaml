@@ -1,4 +1,3 @@
-# @package _group_
 name: NLE
 run: sbi.snle.run
 device: cpu

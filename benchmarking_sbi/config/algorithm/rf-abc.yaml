@@ -1,4 +1,3 @@
-# @package _group_
 name: RF-ABC
 run: pyabcranger.abcrf.run
 device: cpu
