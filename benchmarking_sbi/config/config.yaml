@@ -3,6 +3,7 @@ compute_metrics: true
 
 # Hydra's overrides are used to change to different tasks and algorithms
 defaults:
+  - _self_
   - algorithm: prior
   - task: gaussian_linear
 
