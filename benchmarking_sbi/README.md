@@ -1,6 +1,6 @@
 # Benchmarking simulation-based inference
 
-This repository contains the results as well as the scripts that generated them for the [manuscript "Benchmarking simulation-based inference"](http://proceedings.mlr.press/v130/lueckmann21a.html). 
+This repository contains the results as well as the scripts that generated them for the [manuscript "Benchmarking simulation-based inference"](http://proceedings.mlr.press/v130/lueckmann21a.html). It also includes Ansible playbooks to recreate the exact server setup on which our experiments were run, as detailed under "Reproducing results" below.
 
 The results were generated using our benchmark framework, `sbibm`, which can be found at: https://github.com/sbi-benchmark/sbibm.
 
