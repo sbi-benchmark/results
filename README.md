@@ -8,3 +8,4 @@ This repository contains results obtained with [`sbibm`](https://github.com/sbi-
 Folder             | Description
 ------------------ | -----------
 [`benchmarking_sbi`](https://github.com/sbi-benchmark/results/tree/main/benchmarking_sbi) | Results and code for `Benchmarking Simulation-Based Inference`
+[`gaussian_mixture_rerun`](https://github.com/sbi-benchmark/gaussian_mixture_rerun/tree/main/gaussian_mixture_rerun) | Rerun of the Gaussian Mixture task
