@@ -1,0 +1,2 @@
+python run.py --multirun task.num_observation=1,2,3,4,5,6,7,8,9,10 task.num_simulations=1000,10000,100000 compute_metrics=true hydra/launcher=joblib task=bernoulli_glm,bernoulli_glm_raw,gaussian_linear,gaussian_linear_uniform,gaussian_mixture,slcp,slcp_distractors,two_moons algorithm=npe
+python run.py --multirun task.num_observation=1 task.num_simulations=1000 compute_metrics=false hydra/launcher=joblib task=bernoulli_glm algorithm=npe
