@@ -2,13 +2,18 @@
 
 # for testing.
 # python run.py --multirun task.num_observation=1,2,3,4,5,6,7,8,9,10 task.num_simulations=1000,10000,100000 compute_metrics=true hydra/launcher=joblib task=bernoulli_glm,bernoulli_glm_raw,gaussian_linear,gaussian_linear_uniform,gaussian_mixture,slcp,slcp_distractors,two_moons algorithm=npe
-# python run.py --multirun task.num_observation=1 task.num_simulations=1000 compute_metrics=false hydra/launcher=joblib task=bernoulli_glm algorithm=npe
+# python run.py --multirun task.num_observation=1 task.num_simulations=1000
+# compute_metrics=false hydra/launcher=joblib task=bernoulli_glm algorithm=npe
+# python run.py --multirun task.num_observation=1,2,3,4,5,6,7,8,9,10 task.num_simulations=1000,10000,100000 compute_metrics=true hydra/launcher=joblib task=two_moons algorithm=nre
 
 # List of tasks
-tasks=("bernoulli_glm" "bernoulli_glm_raw" "gaussian_linear" "gaussian_linear_uniform" "gaussian_mixture" "slcp" "slcp_distractors" "two_moons")
+# tasks=("gaussian_linear" "gaussian_linear_uniform" "gaussian_mixture" "slcp"
+# "slcp_distractors" "two_moons")
+tasks=("bernoulli_glm" "bernoulli_glm_raw")
 
 # List of algorithms
-algorithms=("npe" "snpe" "nle" "snle" "nre" "snre")
+# algorithms=("nle" "nre")
+algorithms=("snle" "snre")
 
 # Common settings
 num_observation="1,2,3,4,5,6,7,8,9,10"
@@ -29,6 +34,7 @@ for algorithm in "${algorithms[@]}"; do
             task.num_simulations=$num_simulations \
             compute_metrics=$compute_metrics \
             hydra/launcher=$launcher \
+            hydra.launcher.n_jobs=5 \
             task=$task \
             algorithm=$algorithm
         if [ $? -ne 0 ]; then
