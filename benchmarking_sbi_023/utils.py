@@ -4,12 +4,12 @@ import os
 from pathlib import Path
 from typing import Dict, List, Optional, Union
 
-import deneb as den
+# import deneb as den
 import numpy as np
 import pandas as pd
 import sbibm
 import torch
-from deneb.utils import rgb2hex
+# from deneb.utils import rgb2hex
 from omegaconf import OmegaConf
 from sbibm.utils.io import get_float_from_csv
 from tqdm.auto import tqdm

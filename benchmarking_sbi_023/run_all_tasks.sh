@@ -7,13 +7,12 @@
 # python run.py --multirun task.num_observation=1,2,3,4,5,6,7,8,9,10 task.num_simulations=1000,10000,100000 compute_metrics=true hydra/launcher=joblib task=two_moons algorithm=nre
 
 # List of tasks
-# tasks=("gaussian_linear" "gaussian_linear_uniform" "gaussian_mixture" "slcp"
-# "slcp_distractors" "two_moons")
-tasks=("bernoulli_glm" "bernoulli_glm_raw")
+tasks=("bernoulli_glm" "bernoulli_glm_raw", "gaussian_linear" "gaussian_linear_uniform" "gaussian_mixture" "slcp" "slcp_distractors" "two_moons")
+# tasks=("bernoulli_glm" "bernoulli_glm_raw")
 
 # List of algorithms
-# algorithms=("nle" "nre")
-algorithms=("snle" "snre")
+# algorithms=("nle" "nre" "snle" "snre")
+algorithms=("rej-abc" "smc-abc")
 
 # Common settings
 num_observation="1,2,3,4,5,6,7,8,9,10"
@@ -34,7 +33,7 @@ for algorithm in "${algorithms[@]}"; do
             task.num_simulations=$num_simulations \
             compute_metrics=$compute_metrics \
             hydra/launcher=$launcher \
-            hydra.launcher.n_jobs=5 \
+            hydra.launcher.n_jobs=10 \
             task=$task \
             algorithm=$algorithm
         if [ $? -ne 0 ]; then
