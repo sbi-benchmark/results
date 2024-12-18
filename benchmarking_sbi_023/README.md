@@ -1,24 +1,17 @@
 # Benchmarking simulation-based inference
 
-This repository contains the results as well as the scripts that generated them for the [manuscript "Benchmarking simulation-based inference"](http://proceedings.mlr.press/v130/lueckmann21a.html). It also includes Ansible playbooks to recreate the exact server setup on which our experiments were run, as detailed under "Reproducing results" below.
+This folder contains the reproduction of parts of the benchmarking results of the
+[manuscript "Benchmarking simulation-based
+inference"](http://proceedings.mlr.press/v130/lueckmann21a.html). It contains only the
+results for the "neural" SBI methods, for all tasks except the SIR and LV task (due to
+the Julia dependency). 
 
-The results were generated using our benchmark framework, `sbibm`, which can be found at: https://github.com/sbi-benchmark/sbibm.
+The results were generated using our benchmark framework, `sbibm`, which can be found
+at: https://github.com/sbi-benchmark/sbibm, using the `sbi` version `>0.23.0`. 
 
 ## Results as dataframes
 
-The subfolder `results/` contains csv files with results for the manuscript *Benchmarking simulation-based inference*. They can, for example, be read with [`pandas`](https://pandas.pydata.org) as dataframes for comparisons and further analyses.
-
-| **Filename**                                  | **Description**                                     |
-| --------------------------------------------- | --------------------------------------------------- |
-| `main_paper.csv`                              | All results for main part of the manuscript         |
-| `supplement_rf_abc.csv`                       | RF-ABC results, as in Appendix F                    |
-| `supplement_sl.csv`                           | Synthetic Likelihood (SL) results, as in Appendix F |
-| `supplement_hyperparameters_rej_abc.csv`      | Hyperparameters for REJ-ABC, as in Appendix H       |
-| `supplement_hyperparameters_smc_abc_pyabc.csv`      | Hyperparameters for SMC-ABC (with `pyabc`)          |
-| `supplement_hyperparameters_smc_abc_ours.csv` | Hyperparameters for SMC-ABC (our implementation)    |
-| `supplement_hyperparameters_snle.csv`         | Hyperparameters for (S)NLE                          |
-| `supplement_hyperparameters_snpe.csv`         | Hyperparameters for (S)NPE                          |
-| `supplement_hyperparameters_snre.csv`         | Hyperparameters for (S)NRE                          |
+The subfolder `results/` contains the csv file contain a dataframe with all the results.
 
 ## Raw results for each run
 
